@@ -1,7 +1,7 @@
 /****************************************************
 1. Create an array called movieQueue with at least two Movie Names as strings
 ****************************************************/
-
+var movieQueue = ["Lila and Eve", "Brotherly Love"];
 
 
 /****************************************************
@@ -10,7 +10,10 @@
 - It should add the new movie name to the end of your movieQueue array
 - Finally it should return the movie name it just added
 ****************************************************/
-
+function addMovieToEnd (movieName){
+  movieQueue.push(movieName);
+  return movieName;
+}
 
 
 /****************************************************
@@ -19,7 +22,10 @@
 - It should add the new movie name to the front of your movieQueue array
 - Finally it should return the movie name it just added
 ****************************************************/
-
+function addMovieToFront (movieName){
+   movieQueue.unshift(movieName);
+  return movieName;
+}
 
 
 /****************************************************
@@ -29,7 +35,10 @@
 - It should add the new movie name to the movieQueue array at the given index.
 - Finally it should return the movie name it just added
 ****************************************************/
-
+function changeMovie (index, DOPE){
+  movieQueue[index]= DOPE;
+  return DOPE;
+}
 
 
 /****************************************************
@@ -40,5 +49,11 @@
 - If the index is not valid (meaning that it's larger than the number of items in the array),
   it should return the string "not a valid index"
 ****************************************************/
-
+function getMovie(index){
+  if (index < movieQueue.length){
+    return (movieQueue[index]);
+    } else {
+      return "not a valid index";
+    }
+}
 
